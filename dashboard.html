@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — SchoolShield</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dash-layout">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sidebar-brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2 4 5.5v5.2c0 5.1 3.4 8.9 8 10.3 4.6-1.4 8-5.2 8-10.3V5.5L12 2z"/>
+        <path d="M12 9.5 6.5 11.8 12 14l5.5-2.2L12 9.5z" fill="#2563eb" stroke="none"/>
+        <path d="M8.7 12.8v2.1c0 .9 1.5 1.6 3.3 1.6s3.3-.7 3.3-1.6v-2.1" fill="none"/>
+      </svg>
+      <span>School<span class="accent">Shield</span></span>
+    </a>
+
+    <div class="sidebar-label">Menu</div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="nav-item active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        Dashboard
+      </a>
+      <a href="leadership.html" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7.5v3C3 16 6.8 20 12 21c5.2-1 9-5 9-10.5v-3L12 3z"/></svg>
+        Leadership
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
+        Visitors
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+        Incidents
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.3 20a1.9 1.9 0 0 0 3.4 0"/></svg>
+        Notifications
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 4 2 10l10 6 10-6z"/><path d="M6 12.5V17c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/></svg>
+        Learners
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.7 6.5-5.7s6.5 2.4 6.5 5.7"/><circle cx="17.5" cy="8.5" r="2.2"/><path d="M15.7 14.5c2.6.3 4.8 2.4 4.8 5.2"/></svg>
+        Parents
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.7 6.5-5.7s6.5 2.4 6.5 5.7"/><circle cx="17.5" cy="8.5" r="2.2"/><path d="M15.7 14.5c2.6.3 4.8 2.4 4.8 5.2"/></svg>
+        Staff
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v5.5c0 4.7 3.2 8.3 8 9.5 4.8-1.2 8-4.8 8-9.5V6l-8-3z"/><path d="M9.2 12l2 2 3.6-3.8"/></svg>
+        Security Officers
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg>
+        Reports
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V19a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg>
+        Settings
+      </a>
+    </nav>
+  </aside>
+
+  <div class="dash-main">
+
+    <header class="dash-topbar">
+      <button class="icon-btn" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg>
+      </button>
+
+      <div class="topbar-school">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2 4 5.5v5.2c0 5.1 3.4 8.9 8 10.3 4.6-1.4 8-5.2 8-10.3V5.5L12 2z"/>
+          <path d="M12 9.5 6.5 11.8 12 14l5.5-2.2L12 9.5z" fill="#2563eb" stroke="none"/>
+        </svg>
+        <div>
+          <div class="school-name">Greenfield Primary School</div>
+          <div class="school-role">Administrator Dashboard</div>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.3 20a1.9 1.9 0 0 0 3.4 0"/></svg>
+          <span class="badge">2</span>
+        </button>
+        <button class="icon-btn" aria-label="Settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V19a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg>
+        </button>
+        <div class="user-chip">
+          <div class="avatar">NM</div>
+          <span>Ms. N. Mokoena</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <h1>Good day, Ms. Mokoena</h1>
+      <p class="dash-subtitle">Here's what's happening at our school today.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.7 6.5-5.7s6.5 2.4 6.5 5.7"/><circle cx="17.5" cy="8.5" r="2.2"/><path d="M15.7 14.5c2.6.3 4.8 2.4 4.8 5.2"/></svg></div>
+          <div class="stat-num">3</div>
+          <div class="stat-title">Visitors today</div>
+          <div class="stat-sub">Registered today</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M6 3h9l-2 3 2 3H6"/></svg></div>
+          <div class="stat-num">2</div>
+          <div class="stat-title">Currently on campus</div>
+          <div class="stat-sub">Signed in now</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4h5v16h-5"/><path d="M3 12h13M12 8l4 4-4 4"/></svg></div>
+          <div class="stat-num">1</div>
+          <div class="stat-title">Checked out</div>
+          <div class="stat-sub">Completed visits</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 4 2 10l10 6 10-6z"/><path d="M6 12.5V17c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/></svg></div>
+          <div class="stat-num">1,246</div>
+          <div class="stat-title">Total learners</div>
+          <div class="stat-sub">Enrolled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="stat-num">87</div>
+          <div class="stat-title">Total staff</div>
+          <div class="stat-sub">Teaching &amp; support</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 5.1 3.4 8.9 8 10.3 4.6-1.4 8-5.2 8-10.3V5.5L12 2z"/><path d="M9.2 12l2 2 3.6-3.8"/></svg></div>
+          <div class="stat-num">6</div>
+          <div class="stat-title">Security officers</div>
+          <div class="stat-sub">On duty</div>
+        </div>
+      </div>
+
+      <section class="panel">
+        <h2>Quick actions</h2>
+        <div class="quick-grid">
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.7 6.5-5.7s6.5 2.4 6.5 5.7"/><path d="M19 8v6M22 11h-6"/></svg>
+            Register Visitor
+          </button>
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM19 19h2v2h-2z"/></svg>
+            Scan QR Code
+          </button>
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+            Report Incident
+          </button>
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+            Emergency Alert
+          </button>
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.7 6.5-5.7s6.5 2.4 6.5 5.7"/><circle cx="17.5" cy="8.5" r="2.2"/><path d="M15.7 14.5c2.6.3 4.8 2.4 4.8 5.2"/></svg>
+            Manage Staff
+          </button>
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 4 2 10l10 6 10-6z"/><path d="M6 12.5V17c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M19 9v6M22 12h-2"/></svg>
+            Register Learner
+          </button>
+          <button class="quick-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg>
+            View Reports
+          </button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Incident summary</h2>
+          <a href="#" class="view-all">View all</a>
+        </div>
+        <div class="incident-grid">
+          <div class="incident-card">
+            <div class="incident-num">1</div>
+            <div class="incident-label">Incidents today</div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-num">1</div>
+            <div class="incident-label">Open incidents</div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-num">1</div>
+            <div class="incident-label">High priority</div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-num">1</div>
+            <div class="incident-label">Resolved</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Recent visitor activity</h2>
+            <a href="#" class="view-all">View all</a>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Visitor</th>
+                  <th>Visitor ID</th>
+                  <th>Person visiting</th>
+                  <th>Purpose</th>
+                  <th>Time in</th>
+                  <th>Time out</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thabo Nkosi</td>
+                  <td class="muted">VIS-0001</td>
+                  <td>Mrs. Dlamini</td>
+                  <td>Parent meeting</td>
+                  <td>07:45</td>
+                  <td>—</td>
+                  <td><span class="pill pill-inside">Inside</span></td>
+                </tr>
+                <tr>
+                  <td>Sarah Bennett</td>
+                  <td class="muted">VIS-0002</td>
+                  <td>Reception</td>
+                  <td>Learner collection</td>
+                  <td>08:10</td>
+                  <td>08:25</td>
+                  <td><span class="pill pill-out">Checked Out</span></td>
+                </tr>
+                <tr>
+                  <td>Michael Adams</td>
+                  <td class="muted">VIS-0003</td>
+                  <td>Principal</td>
+                  <td>Supplier delivery</td>
+                  <td>09:02</td>
+                  <td>—</td>
+                  <td><span class="pill pill-inside">Inside</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Recent notifications</h2>
+            <a href="#" class="view-all">View all</a>
+          </div>
+          <div class="notif-list">
+            <div class="notif-item">
+              <div class="notif-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16"/></svg></div>
+              <div class="notif-body">
+                <div class="notif-top">
+                  <span class="notif-title">● Fire drill scheduled</span>
+                  <span class="tag tag-medium">Medium</span>
+                </div>
+                <p class="notif-text">Fire drill scheduled for 13:30 — all gates on standby.</p>
+                <div class="notif-meta">
+                  <span class="tag tag-system">System</span>
+                  <span>15 Aug 2026 · 12:30 · 7 hrs ago</span>
+                </div>
+                <div class="notif-author">· System</div>
+              </div>
+              <button class="notif-check" aria-label="Acknowledge">✓</button>
+            </div>
+
+            <div class="notif-item">
+              <div class="notif-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 5.1 3.4 8.9 8 10.3 4.6-1.4 8-5.2 8-10.3V5.5L12 2z"/></svg></div>
+              <div class="notif-body">
+                <div class="notif-top">
+                  <span class="notif-title">● Unregistered vehicle at …</span>
+                  <span class="tag tag-high">High</span>
+                </div>
+                <p class="notif-text">Unregistered vehicle reported at Gate 2 — officer dispatched.</p>
+                <div class="notif-meta">
+                  <span class="tag tag-security">Security</span>
+                  <span>15 Aug 2026 · 11:30 · 8 hrs ago</span>
+                </div>
+                <div class="notif-author">· Mr. S. Botha (Security Officer)</div>
+              </div>
+              <button class="notif-check" aria-label="Acknowledge">✓</button>
+            </div>
+
+            <div class="notif-hint">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+              Notifications update automatically after each registration and gate scan.
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
