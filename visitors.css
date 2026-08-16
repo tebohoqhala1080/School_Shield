@@ -1,0 +1,132 @@
+/* ---------- Visitor history page ---------- */
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.page-header h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.page-header .dash-subtitle {
+  margin: 0;
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.page-header .btn-primary {
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+}
+
+.page-header .btn-outline {
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+}
+
+.panel-tools-full {
+  justify-content: space-between;
+}
+
+.search-box-full {
+  flex: 1;
+  min-width: 220px;
+}
+
+.search-box-full input {
+  width: 100%;
+}
+
+#visitCount {
+  margin-bottom: 16px;
+}
+
+.panel-title-icon {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* Audit trail */
+
+.audit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audit-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.audit-item strong {
+  font-size: 0.9rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.audit-id {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+.audit-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.audit-time {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .page-header {
+    flex-direction: column;
+  }
+  .page-header-actions {
+    width: 100%;
+  }
+  .page-header-actions button {
+    flex: 1;
+  }
+  .panel-tools-full {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .audit-item {
+    flex-direction: column;
+  }
+}

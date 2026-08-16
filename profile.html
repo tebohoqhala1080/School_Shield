@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile — SchoolShield</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <style>
+    .profile-page {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .profile-main {
+      background: #f8fbff;
+      min-width: 0;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 28px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .profile-content {
+      padding: 28px 32px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+
+    .profile-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 22px 18px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.02);
+    }
+
+    .profile-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .profile-card .subtext {
+      margin: 0 0 22px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 12px 0 18px;
+      border-bottom: 1px solid #edf2f7;
+      margin-bottom: 22px;
+    }
+
+    .profile-avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+      color: #1d4ed8;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+
+    .profile-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 4px;
+    }
+
+    .profile-role {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .profile-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      margin-bottom: 0;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .field .value-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .status-box,
+    .activity-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f8fafc;
+      margin-bottom: 14px;
+    }
+
+    .status-box strong,
+    .activity-box strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.9rem;
+    }
+
+    .status-box span,
+    .activity-box span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .badge-online {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini-stat {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 980px) {
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .profile-page {
+        grid-template-columns: 1fr;
+      }
+      .profile-content {
+        padding: 20px 16px 32px;
+      }
+      .profile-header {
+        padding: 18px 16px;
+      }
+      .profile-details,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-page">
+    <aside class="sidebar" id="sidebar">
+      <a href="index.html" class="sidebar-brand">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2 4 5.5v5.2c0 5.1 3.4 8.9 8 10.3 4.6-1.4 8-5.2 8-10.3V5.5L12 2z"/>
+          <path d="M12 9.5 6.5 11.8 12 14l5.5-2.2L12 9.5z" fill="#2563eb" stroke="none"/>
+          <path d="M8.7 12.8v2.1c0 .9 1.5 1.6 3.3 1.6s3.3-.7 3.3-1.6v-2.1" fill="none"/>
+        </svg>
+        <span>School<span class="accent">Shield</span></span>
+      </a>
+
+      <div class="sidebar-label">Menu</div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          Dashboard
+        </a>
+        <a href="leadership.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7.5v3C3 16 6.8 20 12 21c5.2-1 9-5 9-10.5v-3L12 3z"/></svg>
+          Leadership
+        </a>
+        <a href="visitors.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
+          Visitors
+        </a>
+        <a href="incidents.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+          Incidents
+        </a>
+        <a href="notifications.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.3 20a1.9 1.9 0 0 0 3.4 0"/></svg>
+          Notifications
+        </a>
+        <a href="settings.html" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V19a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg>
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <main class="profile-main">
+      <header class="profile-header">
+        <h1>My profile</h1>
+        <a href="dashboard.html" class="btn btn-secondary" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Back to dashboard</a>
+      </header>
+
+      <div class="profile-content">
+        <div class="profile-grid">
+          <section class="profile-card">
+            <h2>Administrator profile</h2>
+            <p class="subtext">Your personal details and account information for SchoolShield.</p>
+
+            <div class="profile-top">
+              <div class="profile-avatar">NM</div>
+              <div>
+                <p class="profile-name">Ms. N. Mokoena</p>
+                <p class="profile-role">School Administrator</p>
+              </div>
+            </div>
+
+            <div class="profile-details">
+              <div class="field">
+                <label>Email address</label>
+                <div class="value-box">n.mokoena@greenfieldschool.co.za</div>
+              </div>
+              <div class="field">
+                <label>Phone</label>
+                <div class="value-box">+27 82 345 6789</div>
+              </div>
+              <div class="field">
+                <label>Role</label>
+                <div class="value-box">School Administrator</div>
+              </div>
+              <div class="field">
+                <label>Department</label>
+                <div class="value-box">Administration</div>
+              </div>
+              <div class="field">
+                <label>Employee ID</label>
+                <div class="value-box">ADM-2041</div>
+              </div>
+              <div class="field">
+                <label>Location</label>
+                <div class="value-box">Greenfield Primary School</div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="profile-card">
+            <h2>Account status</h2>
+            <p class="subtext">Current access and security details for your SchoolShield account.</p>
+
+            <div class="status-box">
+              <div>
+                <strong>Login status</strong>
+                <span>Active and online</span>
+              </div>
+              <span class="badge-online">Online</span>
+            </div>
+
+            <div class="activity-box">
+              <div>
+                <strong>Last login</strong>
+                <span>Today, 08:42 AM</span>
+              </div>
+            </div>
+
+            <div class="stats-grid">
+              <div class="mini-stat">
+                <strong>27</strong>
+                <span>Alerts handled</span>
+              </div>
+              <div class="mini-stat">
+                <strong>09</strong>
+                <span>Reports this week</span>
+              </div>
+              <div class="mini-stat">
+                <strong>2FA</strong>
+                <span>Enabled</span>
+              </div>
+              <div class="mini-stat">
+                <strong>5</strong>
+                <span>Access groups</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
